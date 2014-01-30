@@ -5,7 +5,7 @@
     android:padding="20dp" >
 
     <TextView
-        android:id="@+id/nkTitle"
+        android:id="@+id/einTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-light"
@@ -35,59 +35,86 @@
             android:orientation="vertical" >
 
             <!-- Von Konto Nummer -->
-           <RelativeLayout
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/uberVonKontoNrDesc"
+                    android:id="@+id/einKontoNrDesc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="@dimen/space"
-                    android:text="@string/kontostand"
+                    android:text="@string/nummer"
                     android:textSize="@dimen/text_size" />
 
                 <EditText
-                    android:id="@+id/uberVonKontoNr"
+                    android:id="@+id/einKontoNr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/uberVonKontoNrDesc"
-                    android:inputType="numberDecimal"
+                    android:layout_toRightOf="@+id/einKontoNrDesc"
+                    android:inputType="number"
                     android:textSize="@dimen/text_size" />
             </RelativeLayout>
-
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/space" />
-              <!-- Von Konto Name -->
-           <RelativeLayout
+            <!-- Von Konto Name -->
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
 
                 <TextView
+                    android:id="@+id/einKontoNameDesc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="@dimen/space"
-                    android:text="@string/kontostand"
+                    android:text="@string/name"
                     android:textSize="@dimen/text_size" />
 
                 <EditText
-                    android:id="@+id/uberVonKontoNr"
+                    android:id="@+id/einKontoName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/nkTvGeld"
-                    android:inputType="numberDecimal"
+                    android:layout_toRightOf="@+id/einKontoNameDesc"
                     android:textSize="@dimen/text_size" />
             </RelativeLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space" />
+
+            <!-- Betrag -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/einBetragDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/space"
+                    android:text="@string/betrag"
+                    android:textSize="@dimen/text_size" />
+
+                <EditText
+                    android:id="@+id/einBetrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/einBetragDesc"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/text_size" />
+            </RelativeLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/space" />
 
             <Button
-                android:id="@+id/nkButton"
+                android:id="@+id/einButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/buttonselect"

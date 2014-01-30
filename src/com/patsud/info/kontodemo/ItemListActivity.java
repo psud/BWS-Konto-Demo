@@ -1,5 +1,6 @@
 package com.patsud.info.kontodemo;
 
+import com.patsud.info.kontodemo.ui.FragmentEinzahlen;
 import com.patsud.info.kontodemo.ui.FragmentNeuesKonto;
 import com.patsud.info.kontodemo.ui.FragmentUeberweisung;
 
@@ -98,8 +99,12 @@ public class ItemListActivity extends FragmentActivity implements
 			fragment = new FragmentNeuesKonto();
 			break;
 		case 2:
+			fragment = new FragmentEinzahlen();
+			break;
+		case 3:
 			fragment = new FragmentUeberweisung();
 			break;
+			
 		default:
 			fragment = new ItemDetailFragment();
 			break;
