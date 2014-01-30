@@ -3,5 +3,16 @@
 
     <string name="app_name">KontoDemo</string>
     <string name="title_item_detail">Item Detail</string>
+    
+    <string name="neues_konto">Neues Konto</string>
+    <string name="name">Name: </string>
+    <string name="nummer">Kundennummer: </string>
+    <string name="kontostand">Kontostand: </string>
+    <string name="kontotyp">Kontotyp: </string>
+    <string name="submit">Konto Anlegen</string>
+    <string name="company">PatSud Banking</string>
+    
+    <string name="girokonto">Girokonto</string>
+    <string name="sparkonto">Sparkonto</string>
 
 </resources>

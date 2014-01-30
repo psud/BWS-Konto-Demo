@@ -1,4 +1,4 @@
-package com.patsud.info.kontodemo;
+package com.patsud.info.kontodemo.ui;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,6 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.patsud.info.kontodemo.ItemDetailActivity;
+import com.patsud.info.kontodemo.ItemListActivity;
+import com.patsud.info.kontodemo.R;
+import com.patsud.info.kontodemo.R.id;
+import com.patsud.info.kontodemo.R.layout;
 import com.patsud.info.kontodemo.content.ContentItems;
 
 /**
@@ -14,7 +19,7 @@ import com.patsud.info.kontodemo.content.ContentItems;
  * contained in a {@link ItemListActivity} in two-pane mode (on tablets) or a
  * {@link ItemDetailActivity} on handsets.
  */
-public class ItemDetailFragment extends Fragment {
+public class FragmentUeberweisung extends Fragment {
 	/**
 	 * The fragment argument representing the item ID that this fragment
 	 * represents.
@@ -30,7 +35,7 @@ public class ItemDetailFragment extends Fragment {
 	 * Mandatory empty constructor for the fragment manager to instantiate the
 	 * fragment (e.g. upon screen orientation changes).
 	 */
-	public ItemDetailFragment() {
+	public FragmentUeberweisung() {
 	}
 
 	@Override
@@ -46,18 +51,15 @@ public class ItemDetailFragment extends Fragment {
 		}
 	}
 
+	private View v;
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.fragment_item_detail,
+		v = inflater.inflate(R.layout.uberweisung,
 				container, false);
 
-		// Show the dummy content as text in a TextView.
-		if (mItem != null) {
-			((TextView) rootView.findViewById(R.id.item_detail))
-					.setText(mItem.content);
-		}
+		
 
-		return rootView;
+		return v;
 	}
 }

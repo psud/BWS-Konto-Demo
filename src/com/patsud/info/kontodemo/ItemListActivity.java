@@ -1,6 +1,7 @@
 package com.patsud.info.kontodemo;
 
 import com.patsud.info.kontodemo.ui.FragmentNeuesKonto;
+import com.patsud.info.kontodemo.ui.FragmentUeberweisung;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -78,9 +79,9 @@ public class ItemListActivity extends FragmentActivity implements
 					.replace(R.id.item_detail_container, fragment).commit();
 
 		} else {
-			//Single pane mode doesnt work yet. 
-			//First working on tablet mode
-			
+			// Single pane mode doesnt work yet.
+			// First working on tablet mode
+
 			// In single-pane mode, simply start the detail activity
 			// for the selected item ID.
 			Intent detailIntent = new Intent(this, ItemDetailActivity.class);
@@ -94,10 +95,13 @@ public class ItemListActivity extends FragmentActivity implements
 		Fragment fragment;
 		switch (item) {
 		case 1:
-				fragment = new FragmentNeuesKonto();
+			fragment = new FragmentNeuesKonto();
+			break;
+		case 2:
+			fragment = new FragmentUeberweisung();
 			break;
 		default:
-				fragment = new ItemDetailFragment();
+			fragment = new ItemDetailFragment();
 			break;
 		}
 		return fragment;

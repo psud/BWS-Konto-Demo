@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -35,86 +34,12 @@
             android:layout_weight="1"
             android:orientation="vertical" >
 
-            <RelativeLayout
+            <!-- Von Konto Nummer -->
+           <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/nkTvName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/space"
-                    android:text="@string/name"
-                    android:textSize="@dimen/text_size" />
-
-                <EditText
-                    android:id="@+id/nkEtName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/nkTvName"
-                    android:inputType="textPersonName" >
-                </EditText>
-            </RelativeLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/space" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-
-                <TextView
-                    android:id="@+id/nkTvNummerDesc"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/space"
-                    android:text="@string/nummer"
-                    android:textSize="@dimen/text_size" />
-
-                <EditText
-                    android:id="@+id/nkTvNummer"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/nkTvNummerDesc"
-                    android:inputType="number"
-                    android:text="0"
-                    android:textSize="@dimen/text_size" />
-            </RelativeLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/space" />
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-
-                <TextView
-                    android:id="@+id/nkTvTypeDesc"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/space"
-                    android:text="@string/kontotyp"
-                    android:textSize="@dimen/text_size" />
-
-                <Spinner
-                    android:id="@+id/nkSpinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" 
-                    android:layout_toRightOf="@+id/nkTvTypeDesc"
-                    android:textSize="@dimen/text_size"/>
-
-            </RelativeLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/space" />
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-
-                <TextView
-                    android:id="@+id/nkTvGeld"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="@dimen/space"
@@ -122,13 +47,39 @@
                     android:textSize="@dimen/text_size" />
 
                 <EditText
-                    android:id="@+id/nkEtGeld"
+                    android:id="@+id/uberVonKontoNr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/nkTvGeld"
                     android:inputType="numberDecimal"
                     android:textSize="@dimen/text_size" />
             </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space" />
+              <!-- Von Konto Name -->
+           <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/space"
+                    android:text="@string/kontostand"
+                    android:textSize="@dimen/text_size" />
+
+                <EditText
+                    android:id="@+id/uberVonKontoNr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/nkTvGeld"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/text_size" />
+            </RelativeLayout>
+
 
             <View
                 android:layout_width="match_parent"
