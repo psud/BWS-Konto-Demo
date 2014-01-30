@@ -1,7 +1,10 @@
 package com.patsud.info.kontodemo;
 
+import com.patsud.info.kontodemo.ui.FragmentNeuesKonto;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 
@@ -57,23 +60,46 @@ public class ItemListActivity extends FragmentActivity implements
 	@Override
 	public void onItemSelected(String id) {
 		Log.d("selection", id);
+		int item;
+		item = Integer.parseInt(id);
+
 		if (mTwoPane) {
 			// In two-pane mode, show the detail view in this activity by
 			// adding or replacing the detail fragment using a
 			// fragment transaction.
 			Bundle arguments = new Bundle();
 			arguments.putString(ItemDetailFragment.ARG_ITEM_ID, id);
-			ItemDetailFragment fragment = new ItemDetailFragment();
+			// ItemDetailFragment fragment = new ItemDetailFragment();
+			Fragment fragment;
+			fragment = OpenFragment(item);
+
 			fragment.setArguments(arguments);
 			getSupportFragmentManager().beginTransaction()
 					.replace(R.id.item_detail_container, fragment).commit();
 
 		} else {
+			//Single pane mode doesnt work yet. 
+			//First working on tablet mode
+			
 			// In single-pane mode, simply start the detail activity
 			// for the selected item ID.
 			Intent detailIntent = new Intent(this, ItemDetailActivity.class);
 			detailIntent.putExtra(ItemDetailFragment.ARG_ITEM_ID, id);
 			startActivity(detailIntent);
 		}
+	}
+
+	private Fragment OpenFragment(int item) {
+		// TODO Auto-generated method stub
+		Fragment fragment;
+		switch (item) {
+		case 1:
+				fragment = new FragmentNeuesKonto();
+			break;
+		default:
+				fragment = new ItemDetailFragment();
+			break;
+		}
+		return fragment;
 	}
 }
