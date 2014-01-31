@@ -18,7 +18,7 @@ public class ContentItems {
 
 	private Context c;
 	
-	public void ContentItems(Context c){
+	public ContentItems(Context c){
 		this.c = c;
 	}
 	/**

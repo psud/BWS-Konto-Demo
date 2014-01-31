@@ -74,7 +74,8 @@ public class ItemListFragment extends ListFragment {
 		super.onCreate(savedInstanceState);
 		
 		
-		ArrayList<String> list = MakeListContent();
+//		ArrayList<String> list = MakeListContent();
+//		ArrayAdapter<String> adapter = MakeListContent2();
 		
 //		ContentItems cI = new ContentItems(getActivity());
 
@@ -84,20 +85,25 @@ public class ItemListFragment extends ListFragment {
 				android.R.id.text1, ContentItems.ITEMS));
 	}
 
-	private ArrayList<String> MakeListContent() {
-		// TODO Auto-generated method stub
-	    String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
-	        "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
-	        "Linux", "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux",
-	        "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux", "OS/2",
-	        "Android", "iPhone", "WindowsMobile" };
-	    
-	    final ArrayList<String> list = new ArrayList<String>();
-	    for (int i = 0; i < values.length; ++i) {
-	      list.add(values[i]);
-	    }
-		return list;
-	}
+//	private ArrayAdapter<String> MakeListContent2() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	private ArrayList<String> MakeListContent() {
+//		// TODO Auto-generated method stub
+//	    String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
+//	        "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
+//	        "Linux", "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux",
+//	        "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux", "OS/2",
+//	        "Android", "iPhone", "WindowsMobile" };
+//	    
+//	    final ArrayList<String> list = new ArrayList<String>();
+//	    for (int i = 0; i < values.length; ++i) {
+//	      list.add(values[i]);
+//	    }
+//		return list;
+//	}
 
 	@Override
 	public void onViewCreated(View view, Bundle savedInstanceState) {
